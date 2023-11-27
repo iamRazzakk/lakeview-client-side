@@ -16,7 +16,9 @@ import Error from './components/Error/Error';
 import Dashboard from './components/Dashboard/Dashboard';
 import Profile from './components/Dashboard/Profile';
 import Announcements from './components/Dashboard/Announcements';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 // import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -47,7 +49,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element: <Dashboard></Dashboard>,
+    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
     children: [
       {
         path: 'profile',
@@ -55,7 +57,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'Announcements',
-        element:<Announcements></Announcements>
+        element: <Announcements></Announcements>
       }
     ]
   }
