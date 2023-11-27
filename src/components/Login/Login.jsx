@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import loginImg from '../../../public/login.jpg';
 import { useContext } from "react";
 import { AuthContext } from "../Authprovider/AuthProvider";
@@ -6,7 +6,8 @@ import { FcGoogle } from "react-icons/fc";
 import { Swal } from 'sweetalert2';
 
 const Login = () => {
-    const { logIn,googleSingIn } = useContext(AuthContext)
+    const location = useNavigate()
+    const { logIn, googleSingIn } = useContext(AuthContext)
     const handleLogin = e => {
         e.preventDefault()
         const form = e.target
@@ -17,14 +18,36 @@ const Login = () => {
             .then(result => {
                 const user = result.user
                 console.log(user);
+                location('/')
+                Swal.fire("Login successfully");
+            })
+            .catch(error => {
+                console.log(error);
+                if (error) {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Do you want to continue',
+                        icon: 'error',
+                        confirmButtonText: 'Cool'
+                    })
+                }
             })
     }
     const handleSingUpWithGoogle = () => {
         googleSingIn()
             .then(() => {
                 Swal.fire("Login successfully");
+                location('/')
             })
             .catch(error => {
+                if (error) {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Do you want to continue',
+                        icon: 'error',
+                        confirmButtonText: 'Cool'
+                    })
+                }
                 console.log(error);
             })
     }
@@ -61,7 +84,7 @@ const Login = () => {
                         <div className="text-2xl flex justify-center items-center">
                             <button onClick={handleSingUpWithGoogle} className="btn btn-outline rounded-full"><FcGoogle></FcGoogle></button>
                         </div>
-                        <p className="text-center">New hear please <Link className="text-blue-600" to={'/singup'}>Sing up</Link></p>
+                        <p className="text-center">New hear please <Link className="text-blue-600" to={'/singup'}>Sing Up</Link></p>
                     </form>
                 </div>
             </div>

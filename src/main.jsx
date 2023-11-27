@@ -8,12 +8,18 @@ import {
 import Main from './components/Main/Main';
 import Login from './components/Login/Login';
 import Singup from './components/Singup/Singup';
-import AuthProvider, { AuthContext } from './components/Authprovider/AuthProvider';
+import AuthProvider from './components/Authprovider/AuthProvider';
+import Home from './components/Home/Home';
+import Apartment from './components/Apartment/Apartment';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    children:[
+    children: [
+      {
+        path: '/',
+        element: <Home></Home>
+      },
       {
         path: 'login',
         element: <Login></Login>
@@ -22,17 +28,23 @@ const router = createBrowserRouter([
         path: '/singup',
         element: <Singup></Singup>
       },
+      {
+        path: 'apartment',
+        element: <Apartment></Apartment>
+      }
     ]
   },
-  
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <AuthProvider>
-    <React.StrictMode>
-      <div className='max-w-screen-xl mx-auto'>
-        <RouterProvider router={router} />
-      </div>
-    </React.StrictMode>,
-  </AuthProvider>
+  <div className='bg-white'>
+    <AuthProvider>
+      <React.StrictMode>
+        <div className='max-w-screen-xl mx-auto'>
+          <RouterProvider router={router} />
+        </div>
+      </React.StrictMode>,
+    </AuthProvider>
+  </div>
 )

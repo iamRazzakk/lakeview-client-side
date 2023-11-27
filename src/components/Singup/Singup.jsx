@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Authprovider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
@@ -8,6 +8,7 @@ import Swal from "sweetalert2";
 
 const Singup = () => {
     const { createUser, googleSingIn } = useContext(AuthContext)
+    const location = useNavigate()
     const {
         register,
         handleSubmit,
@@ -20,6 +21,8 @@ const Singup = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
+                Swal.fire("Login successfully");
+                location('/')
             })
             .catch(error => {
                 console.log(error);
@@ -41,6 +44,7 @@ const Singup = () => {
         googleSingIn()
             .then(() => {
                 Swal.fire("Login successfully");
+                location('/')
             })
             .catch(error => {
                 console.log(error);
@@ -81,7 +85,7 @@ const Singup = () => {
                     <div className="text-2xl flex justify-center items-center">
                         <button onClick={handleSingUpWithGoogle} className="btn btn-outline rounded-full"><FcGoogle></FcGoogle></button>
                     </div>
-                    <p className="text-center">Already Have an account? please <Link className="text-blue-600" to={'/login'}>Login</Link></p>
+                    <p className="text-center">Already Have an account? please <Link className="text-blue-600" to={'/login'}>Sing Up</Link></p>
                     <div className="divider"></div>
                 </form>
             </div>

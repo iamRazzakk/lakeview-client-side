@@ -1,0 +1,154 @@
+[
+    {
+        "floorNumber": 2,
+        "blockName": "A",
+        "apartmentNumber": 201,
+        "rent": 1200,
+        "agreementButton": "View Agreement",
+        "img": "https://media.istockphoto.com/id/863561484/photo/living-room-with-table.jpg?s=612x612&w=0&k=20&c=eO1hkbZnpjm7fgkO0F_Ea0oCh2WMoHPvJO4uluYH2oo="
+    },
+    {
+        "floorNumber": 1,
+        "blockName": "B",
+        "apartmentNumber": 102,
+        "rent": 950,
+        "agreementButton": "View Agreement",
+        "img": "https://cdn.create.vista.com/api/media/small/169065142/stock-photo-modern-apartment-interior"
+    },
+    {
+        "floorNumber": 3,
+        "blockName": "C",
+        "apartmentNumber": 305,
+        "rent": 1500,
+        "agreementButton": "View Agreement",
+        "img": "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    },
+    {
+        "floorNumber": 4,
+        "blockName": "A",
+        "apartmentNumber": 403,
+        "rent": 1300,
+        "agreementButton": "View Agreement",
+        "img": "https://www.anyplace.com/home/thumbnail.jpg"
+    },
+    {
+        "floorNumber": 2,
+        "blockName": "B",
+        "apartmentNumber": 203,
+        "rent": 1100,
+        "agreementButton": "View Agreement",
+        "img": "https://media.istockphoto.com/id/1289883686/photo/spacious-apartment-with-window-wall.jpg?s=612x612&w=0&k=20&c=u1avj_PrIxK_7TFf8rP6m0j3g7PyUyd-rgCzpF8SLao="
+    },
+    {
+        "floorNumber": 1,
+        "blockName": "C",
+        "apartmentNumber": 101,
+        "rent": 1000,
+        "agreementButton": "View Agreement",
+        "img": "https://hips.hearstapps.com/hmg-prod/images/studio-apartment-ideas-room-divider-ideas-tranebergsva-gen-stockholm-living-room-industry-fantastic-frank-popular-copy-1589570199.jpg"
+    },
+    {
+        "floorNumber": 3,
+        "blockName": "A",
+        "apartmentNumber": 301,
+        "rent": 1400,
+        "agreementButton": "View Agreement",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgMQnn50kDfdltv9zhqDXCrAgKIv2WwHkfgw&usqp=CAU"
+    },
+    {
+        "floorNumber": 4,
+        "blockName": "B",
+        "apartmentNumber": 401,
+        "rent": 1600,
+        "agreementButton": "View Agreement",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTImr2VNvGNovARE9tszZaCCRor8bDR3_X1CA&usqp=CAU"
+    },
+    {
+        "floorNumber": 2,
+        "blockName": "C",
+        "apartmentNumber": 204,
+        "rent": 1250,
+        "agreementButton": "View Agreement",
+        "img": "https://medialibrarycfo.entrata.com/fit-in/500x500/9241/MLv3/10/41/2022/09/02/092901/6312213ce87ed6.53019223454.jpg"
+    },
+    {
+        "floorNumber": 1,
+        "blockName": "A",
+        "apartmentNumber": 102,
+        "rent": 900,
+        "agreementButton": "View Agreement",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd5Ahd3lU0L9X2O-lWSV02L2zEo1gjLVrApg&usqp=CAU"
+    },
+    {
+        "floorNumber": 3,
+        "blockName": "B",
+        "apartmentNumber": 302,
+        "rent": 1450,
+        "agreementButton": "View Agreement",
+        "img": "https://www.thespruce.com/thmb/XqZHfa5YB_JXmjbJZyfJ69W8N5o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1304919673-9d1bb3066c32435997884c9c7608b04a.jpg"
+    },
+    {
+        "floorNumber": 4,
+        "blockName": "C",
+        "apartmentNumber": 404,
+        "rent": 1550,
+        "agreementButton": "View Agreement",
+        "img": "https://ew.com/thmb/EKtzGI4CY4kZ9T4mv-i2BjyfZSc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/1466781614-gettyimages-138422680-2000-8565e17ed5ab444fbf178f060b753c8d.jpg"
+    },
+    {
+        "floorNumber": 2,
+        "blockName": "A",
+        "apartmentNumber": 202,
+        "rent": 1150,
+        "agreementButton": "View Agreement",
+        "img": "https://photos.zillowstatic.com/fp/51204d88323089af90c5b904457937d1-se_medium_500_250.webp"
+    },
+    {
+        "floorNumber": 1,
+        "blockName": "B",
+        "apartmentNumber": 101,
+        "rent": 980,
+        "agreementButton": "View Agreement",
+        "img": "https://assets-news.housing.com/news/wp-content/uploads/2020/06/24181202/Everything-you-need-to-know-about-studio-apartments-image-04-shutterstock_435947263-compressed.jpg"
+    },
+    {
+        "floorNumber": 3,
+        "blockName": "C",
+        "apartmentNumber": 303,
+        "rent": 1350,
+        "agreementButton": "View Agreement",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToSgBhTS5aTz4vQIV5e74ITFF7ebxzqNfx4Q&usqp=CAU"
+    },
+    {
+        "floorNumber": 4,
+        "blockName": "A",
+        "apartmentNumber": 402,
+        "rent": 1480,
+        "agreementButton": "View Agreement",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQthN-BmWfh8kaPfU3IhMgd1vTxMgGndLaJbRCPJYPCHYGzi_g73P2HsoRkrddU8BVtnjk&usqp=CAU"
+    },
+    {
+        "floorNumber": 2,
+        "blockName": "B",
+        "apartmentNumber": 205,
+        "rent": 1220,
+        "agreementButton": "View Agreement",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEklUbsmyPU7MMStS9c_JMMbWGOSEmMrbuM17dHqbLv7zfChsjGgtsCqNZiARKL-8VZ9A&usqp=CAU"
+    },
+    {
+        "floorNumber": 1,
+        "blockName": "C",
+        "apartmentNumber": 103,
+        "rent": 960,
+        "agreementButton": "View Agreement",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3pWwJkLFSBqCIl8GzRxNw0V0xfM61DlCHAg&usqp=CAU"
+    },
+    {
+        "floorNumber": 3,
+        "blockName": "A",
+        "apartmentNumber": 304,
+        "rent": 1420,
+        "agreementButton": "View Agreement",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL7M_N2An1hCRBZY31j5vwMmhz_DgB6BazDg&usqp=CAU"
+    }
+]
