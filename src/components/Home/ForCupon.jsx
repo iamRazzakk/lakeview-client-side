@@ -2,10 +2,10 @@
 
 const ForCupon = () => {
     const couponData = [
-        { category: "Rent Discounts", title: "Save on Rent", description: "Get a special discount on your next month's rent.", discount: '%20' },
-        { category: "Amenities", title: "Free Gym Access", description: "Enjoy complimentary access to the on-site gym facilities.", discount: '%37' },
-        { category: "Referral Bonus", title: "Refer a Friend", description: "Refer a friend and receive a bonus on your rent.", discount: '%25' },
-        { category: "Amenities", title: "Free Gym Access", description: "Enjoy complimentary access to the on-site gym facilities.", discount: '%35' },
+        { category: "Rent Discounts", title: "Save on Rent", description: "Get a special discount on your next month's rent.", discount: '20%' },
+        { category: "Amenities", title: "Free Gym Access", description: "Enjoy complimentary access to the on-site gym facilities.", discount: '37%' },
+        { category: "Referral Bonus", title: "Refer a Friend", description: "Refer a friend and receive a bonus on your rent.", discount: '25%' },
+        { category: "Amenities", title: "Free Gym Access", description: "Enjoy complimentary access to the on-site gym facilities.", discount: '35%' },
 
     ];
 
