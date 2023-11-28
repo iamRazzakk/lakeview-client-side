@@ -22,6 +22,8 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import ForMember from './components/Dashboard/Formember';
 import ForAgreement from './components/Dashboard/ForAgreement';
 import ForCoupons from './components/Dashboard/ForCoupons';
+import AllAnnouncements from './components/Dashboard/AllAnnouncements';
+// import AllUsers from './components/Dashboard/AllUsers';
 const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
@@ -60,6 +62,7 @@ const router = createBrowserRouter([
     path: '/dashboard',
     element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
     children: [
+      // user routes
       {
         path: 'profile',
         element: <Profile></Profile>
@@ -68,6 +71,7 @@ const router = createBrowserRouter([
         path: 'Announcements',
         element: <Announcements></Announcements>
       },
+      // admin routes
       {
         path: 'member',
         element: <ForMember></ForMember>
@@ -79,6 +83,11 @@ const router = createBrowserRouter([
       {
         path: 'coupons',
         element: <ForCoupons></ForCoupons>
+      },
+      // for user
+      {
+        path: 'allannouncements',
+        element: <AllAnnouncements></AllAnnouncements>
       }
     ]
   }

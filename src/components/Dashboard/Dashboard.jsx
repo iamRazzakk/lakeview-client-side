@@ -1,12 +1,14 @@
 import { NavLink, Outlet } from "react-router-dom";
 import Navbar from "../../shared/Navbar/Navbar";
-import { useContext } from "react";
-import { AuthContext } from "../Authprovider/AuthProvider";
+// import { useContext } from "react";
+// import { AuthContext } from "../Authprovider/AuthProvider";
+import useAdmin from "../Hook/useAdmin";
 
 
 const Dashboard = () => {
-    // const { user } = useContext(AuthContext)
-    const isAdmin = true
+    // const { user } = useContext(AuthContext);
+    const [isAdmin] =useAdmin();
+    
     return (
         <div>
             <Navbar></Navbar>
@@ -25,7 +27,7 @@ const Dashboard = () => {
                                 <>
                                     {/* todo for user */}
                                     <li className="md:mb-4"><NavLink to='/dashboard/profile'>My Profile</NavLink></li>
-                                    <li><NavLink to='/dashboard/Announcements'>Announcements</NavLink></li>
+                                    <li><NavLink to='/dashboard/allannouncements'>Announcements</NavLink></li>
                                 </>
                         }
                     </ul>
