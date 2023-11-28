@@ -1,24 +1,27 @@
-import { useEffect, useState } from 'react';
+
 import AppartmentFullData from './AppartmentFullData';
+import { useQuery } from '@tanstack/react-query';
+import useAxiosSecure from '../Hook/useAxiosSecure';
 
 const Apartment = () => {
-    const [data, setData] = useState([]);
+    const axiosSecure = useAxiosSecure();
+    const { data: apartments = [] } = useQuery({
+        queryKey: ["apartments"],
+        queryFn: async () => {
+            const res = await axiosSecure.get("/apartments");
+            return res.data;
+        },
+    });
 
-    useEffect(() => {
-        fetch('http://localhost:5000/appartment')
-            .then(res => res.json())
-            .then(data => setData(data))
-    }, []); 
 
-    console.log(data);
 
     return (
         <div>
             <h1 className='text-3xl font-Poppins font-bold text-center md:mb-12'>Total list</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
                 {
-                    data.map(apartment => (
-                        <AppartmentFullData key={apartment._id} appertment={apartment} />
+                    apartments?.map(apartment => (
+                        <AppartmentFullData key={apartment._id} apartment={apartment} />
                     ))
                 }
             </div>

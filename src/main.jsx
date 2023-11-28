@@ -17,7 +17,9 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Profile from './components/Dashboard/Profile';
 import Announcements from './components/Dashboard/Announcements';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
-// import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import Agrement from './components/Apartment/Agrement';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
@@ -40,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: 'apartment',
         element: <Apartment></Apartment>
+      },
+      {
+        path: 'apartment/:id',
+        element: <Agrement></Agrement>
       },
       {
         path: '/locationOnMap',
@@ -66,14 +72,16 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <div className='bg-white'>
-    {/* <QueryClientProvider client={QueryClient}> */}
-    <AuthProvider>
-      <React.StrictMode>
-        <div className='max-w-screen-xl mx-auto text-Poppins'>
-          <RouterProvider router={router} />
-        </div>
-      </React.StrictMode>,
-    </AuthProvider>
-    {/* </QueryClientProvider> */}
-  </div>
+    <React.StrictMode>
+      <AuthProvider>
+        <QueryClientProvider client={queryClient}>
+
+          <div className='max-w-screen-xl mx-auto text-Poppins'>
+            <RouterProvider router={router} />
+          </div>
+
+        </QueryClientProvider>
+      </AuthProvider>
+    </React.StrictMode >
+  </div >
 )

@@ -36,8 +36,8 @@ const Login = () => {
     const handleSingUpWithGoogle = () => {
         googleSingIn()
             .then(() => {
-                Swal.fire("Login successfully");
                 location('/')
+                Swal.fire("Login successfully");
             })
             .catch(error => {
                 if (error) {

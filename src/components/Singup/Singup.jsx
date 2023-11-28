@@ -4,42 +4,62 @@ import { AuthContext } from "../Authprovider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
 import Swal from "sweetalert2";
+import useAxiosPublic from "../Hook/useAxiosPublic";
 
 
 const Singup = () => {
-    const { createUser, googleSingIn } = useContext(AuthContext)
+    const { createUser, googleSingIn, updateProfileUser } = useContext(AuthContext)
     const location = useNavigate()
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm()
 
     const onSubmit = (data) => {
-        console.log(data)
         createUser(data.email, data.password)
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
-                Swal.fire("Login successfully");
-                location('/')
-            })
-            .catch(error => {
-                console.log(error);
-            })
-    }
+                updateProfileUser(data.name, data.photoURL)
+                    .then(() => {
+                        console.log("user profile update");
+                        reset()
+                        Swal.fire({
+                                        position: 'top-end',
+                                        icon: 'success',
+                                        title: 'User created successfully.',
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    });
+                                    location('/')
+                        // create user entry in the database
+                        // const userInfo = {
+                        //     name: data.name,
+                        //     email: data.email
+                        // }
+                        // useAxiosPublic.post('/users', userInfo)
+                            // .then(res => {
+                            //     if (res.data.insertedId) {
+                            //         console.log('user added to the database')
+                            //         reset();
+                            //         Swal.fire({
+                            //             position: 'top-end',
+                            //             icon: 'success',
+                            //             title: 'User created successfully.',
+                            //             showConfirmButton: false,
+                            //             timer: 1500
+                            //         });
+                            //         location('/');
+                            //     }
+                            // })
 
-    // const handleSingUp = e => {
-    //     e.preventDefault();
-    //     const form = e.target
-    //     const name = form.name.value
-    //     const email = form.email.value
-    //     const password = form.password.value
-    //     console.log(name, email, password);
-    //     createUser()
-    //         .then()
-    //         .then()
-    // }
+
+                    })
+                    .catch(error => console.log(error))
+            })
+    };
     const handleSingUpWithGoogle = () => {
         googleSingIn()
             .then(() => {
@@ -70,6 +90,13 @@ const Singup = () => {
                         </label>
                         <input type="email" name="email" {...register("email", { required: true })} placeholder="email" className="input input-bordered" />
                         {errors.email && <span className="text-red-500">This email field is required</span>}
+                    </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Photo</span>
+                        </label>
+                        <input type="text" name="photo" {...register("photo", { required: true })} placeholder="Enter your Image" className="input input-bordered" />
+                        {errors.photo && <span className="text-red-500">This Photo field is required</span>}
                     </div>
                     <div className="form-control">
                         <label className="label">

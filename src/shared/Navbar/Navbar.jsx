@@ -51,7 +51,7 @@ const Navbar = () => {
                     <ul tabIndex={0} className="mt-3 md:mt-6 z-[1] p-2 bg-white text-black shadow menu menu-sm dropdown-content  rounded w-52">
                         <li>
                             <a className="justify-between">
-                                Name
+                                {user?.displayName}
                             </a>
                         </li>
                         <li><Link to='/dashboard/profile'>Dashboard</Link></li>
