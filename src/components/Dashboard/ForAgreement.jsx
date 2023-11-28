@@ -50,11 +50,6 @@ const ForAgreement = () => {
                 </tbody>
             </table>
         </div>
-        // <div>
-        //     {
-        //         agreements?.map(agreement => <Agreement key={agreement._id} agreement={agreement}></Agreement>)
-        //     }
-        // </div>
     );
 };
 

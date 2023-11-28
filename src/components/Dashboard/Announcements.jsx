@@ -1,22 +1,72 @@
+import useAxiosSecure from "../Hook/useAxiosSecure";
+import { Swal } from 'sweetalert2';
 
 
 const Announcements = () => {
+    const axiosSecure = useAxiosSecure()
+    const handleAgrement = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const title = form.Title.value;
+        const announcement = form.Announcement.value;
+        const announcements = {
+            Title: title,
+            Announcement: announcement,
+        };
+
+        axiosSecure.post('/announcements', announcements)
+            .then(res => {
+                console.log(res.data);
+                if (res.data.acknowledged) {
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        title: "Agreement request successfully",
+                        showConfirmButton: false,
+                        timer: 2500
+                    });
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+
+
+    }
     return (
-        <div>
+        < div >
             <h1 className="text-2xl font-bold text-center uppercase">
-                Announcements
+                Owner  Announcements
             </h1>
-            <div className="p-6">
-                <p className="md:mb-6">1. Community BBQ this Saturday! Join us for food, fun, and neighborly vibes.</p>
-                <p className="md:mb-6">2. New pet-friendly policies! Check the board for details and upcoming events.</p>
-                <p className="md:mb-6">3. Monthly meeting Thursday. Your input matters – let build a better community!</p>
-                <p className="md:mb-6">4. Safety first! Lock doors securely to keep our community secure.</p>
-                <p className="md:mb-6">5. Lost keys found near the entrance. Contact the office to claim.</p>
-                <p className="md:mb-6">6. Join our fitness class! Get active, meet neighbors, and have fun.</p>
-                <p className="md:mb-6">7. Book club meeting today. Grab a book and enjoy good company.</p>
+            <div className="hero min-h-screen text-white">
+                <div className="hero-content flex-col lg:flex-row-reverse">
+                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                        <form onSubmit={handleAgrement} className="card-body bg-slate-300">
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Title</span>
+                                </label>
+                                <input type="text" name="Title" placeholder="Title" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Announcement</span>
+                                </label>
+                                <input type="text" name="Announcement" placeholder="Announcement description" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control mt-6">
+                                <button className="btn">
+                                    <input type="submit" value="Submit" />
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
+
+        </div >
     );
 };
 
 export default Announcements;
+// announcements
