@@ -19,6 +19,9 @@ import Announcements from './components/Dashboard/Announcements';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Agrement from './components/Apartment/Agrement';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import ForMember from './components/Dashboard/Formember';
+import ForAgreement from './components/Dashboard/ForAgreement';
+import ForCoupons from './components/Dashboard/ForCoupons';
 const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
@@ -64,6 +67,18 @@ const router = createBrowserRouter([
       {
         path: 'Announcements',
         element: <Announcements></Announcements>
+      },
+      {
+        path: 'member',
+        element: <ForMember></ForMember>
+      },
+      {
+        path: 'agreement',
+        element: <ForAgreement></ForAgreement>
+      },
+      {
+        path: 'coupons',
+        element: <ForCoupons></ForCoupons>
       }
     ]
   }

@@ -4,11 +4,12 @@ import { AuthContext } from "../Authprovider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
 import Swal from "sweetalert2";
-import useAxiosPublic from "../Hook/useAxiosPublic";
+import useAxiosPublic from './../Hook/useAxiosPublic';
 
 
 const Singup = () => {
     const { createUser, googleSingIn, updateProfileUser } = useContext(AuthContext)
+    const axiosPublic = useAxiosPublic();
     const location = useNavigate()
     const {
         register,
@@ -24,38 +25,26 @@ const Singup = () => {
                 console.log(loggedUser);
                 updateProfileUser(data.name, data.photoURL)
                     .then(() => {
-                        console.log("user profile update");
-                        reset()
-                        Swal.fire({
+                        const userInfo = {
+                            name: data.name,
+                            email: data.email,
+                            role: 'user'
+                        }
+                        axiosPublic.post('/users', userInfo)
+                            .then((res) => {
+                                if (res.data.insertedId) {
+                                    console.log("user profile update");
+                                    reset()
+                                    Swal.fire({
                                         position: 'top-end',
                                         icon: 'success',
                                         title: 'User created successfully.',
                                         showConfirmButton: false,
                                         timer: 1500
                                     });
-                                    location('/')
-                        // create user entry in the database
-                        // const userInfo = {
-                        //     name: data.name,
-                        //     email: data.email
-                        // }
-                        // useAxiosPublic.post('/users', userInfo)
-                            // .then(res => {
-                            //     if (res.data.insertedId) {
-                            //         console.log('user added to the database')
-                            //         reset();
-                            //         Swal.fire({
-                            //             position: 'top-end',
-                            //             icon: 'success',
-                            //             title: 'User created successfully.',
-                            //             showConfirmButton: false,
-                            //             timer: 1500
-                            //         });
-                            //         location('/');
-                            //     }
-                            // })
-
-
+                                }
+                            })
+                        location('/')
                     })
                     .catch(error => console.log(error))
             })
@@ -112,7 +101,7 @@ const Singup = () => {
                     <div className="text-2xl flex justify-center items-center">
                         <button onClick={handleSingUpWithGoogle} className="btn btn-outline rounded-full"><FcGoogle></FcGoogle></button>
                     </div>
-                    <p className="text-center">Already Have an account? please <Link className="text-blue-600" to={'/login'}>Sing Up</Link></p>
+                    <p className="text-center">Already Have an account? please <Link className="text-blue-600" to={'/login'}>Log in</Link></p>
                     <div className="divider"></div>
                 </form>
             </div>

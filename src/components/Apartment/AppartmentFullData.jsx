@@ -29,10 +29,10 @@ const AppartmentFullData = ({ apartment }) => {
             }
             axiosSecure.post('/agreements', agreementData)
                 .then(res => {
-                    console.log(res.data)
-                    if (res.data.insertedId) {
+                    console.log(res.data);
+                    if (res.data && res.data.acknowledged) {
                         Swal.fire({
-                            position: "top-end",
+                            position: "center",
                             icon: "success",
                             title: "Agreement request successfully",
                             showConfirmButton: false,
@@ -40,7 +40,6 @@ const AppartmentFullData = ({ apartment }) => {
                         });
                     }
                 })
-
         }
     }
     return (
