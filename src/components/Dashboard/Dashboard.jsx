@@ -1,15 +1,18 @@
 import { NavLink, Outlet } from "react-router-dom";
 import Navbar from "../../shared/Navbar/Navbar";
-// import { useContext } from "react";
-// import { AuthContext } from "../Authprovider/AuthProvider";
+import { useContext } from "react";
+import { AuthContext } from "../Authprovider/AuthProvider";
 import useAdmin from "../Hook/useAdmin";
-// import useMember from "../Hook/useMember";
+import useMember from "../Hook/useMember";
+import useUsers from "../Hook/useUser";
 
 
 const Dashboard = () => {
-    // const { user } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     const [isAdmin] = useAdmin();
-    // const [isMember] = useMember()
+    const [isMember] = useMember()
+    const [users] = useUsers()
+    const isUser = users?.filter(usr => usr.role == "user" && usr.email == user.email)
 
     return (
         <div>
@@ -28,13 +31,28 @@ const Dashboard = () => {
                                 <div className="divider"></div>
                                 <li><NavLink to='/'>Home</NavLink></li>
                                 <li><NavLink to='/dashboard/allannouncements'>All Announcement</NavLink></li>
-                            </> :
-                                <>
-
-                                    <li className="md:mb-4"><NavLink to='/dashboard/profile'>My Profile</NavLink></li>
-                                    <li><NavLink to='/dashboard/allannouncements'>Announcements</NavLink></li>
-                                </>
+                            </> : <></>
                         }
+                        {
+                            isUser?.length > 0 ? <>
+
+                                <li className="md:mb-4"><NavLink to='/dashboard/profile'>My Profile</NavLink></li>
+                                <li><NavLink to='/dashboard/allannouncements'>Announcements</NavLink></li>
+                            </> : <></>
+                        }
+                        {
+                            isMember ? <>
+
+
+                            </> : <>
+                                < li > <NavLink to='/dashboard/memberProfile'>My Profile</NavLink></li>
+                                < li > <NavLink to='/dashboard/makepayment'>Make payment</NavLink></li>
+                                < li > <NavLink to='/dashboard/payment'>Payment History</NavLink></li>
+                                < li > <NavLink to='/dashboard/allannouncements'>Announcements</NavLink></li>
+                            </>
+                        }
+
+
                     </ul>
 
                 </div>
@@ -43,7 +61,7 @@ const Dashboard = () => {
                 </div>
             </div>
 
-        </div>
+        </div >
     );
 };
 

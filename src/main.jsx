@@ -23,6 +23,8 @@ import ForMember from './components/Dashboard/Formember';
 import ForAgreement from './components/Dashboard/ForAgreement';
 import ForCoupons from './components/Dashboard/ForCoupons';
 import AllAnnouncements from './components/Dashboard/AllAnnouncements';
+import FormemberPayment from './components/Dashboard/FormemberPayment';
+import ForPaymentHistory from './components/Dashboard/ForPaymentHistory';
 // import AllUsers from './components/Dashboard/AllUsers';
 const queryClient = new QueryClient();
 
@@ -88,6 +90,19 @@ const router = createBrowserRouter([
       {
         path: 'allannouncements',
         element: <AllAnnouncements></AllAnnouncements>
+      },
+      // for member
+      {
+        path: 'memberProfile',
+        element: <Profile></Profile>
+      },
+      {
+        path: 'makepayment',
+        element: <ForPaymentHistory></ForPaymentHistory>
+      },
+      {
+        path: 'payment',
+        element: <FormemberPayment></FormemberPayment>
       }
     ]
   }

@@ -10,9 +10,9 @@ const useMember = () => {
     const { data: isMember, isPending: isMemberLoading } = useQuery({
         queryKey: [user?.email, 'isMember'],
         queryFn: async () => {
-            console.log('asking or checking is admin', user)
+            console.log('asking or checking is member', user)
             const res = await axiosPublic.get(`/users/member/${user?.email}`);
-            return res.data?.admin;
+            return res.data?.member;
         }
     })
     return [isMember, isMemberLoading]

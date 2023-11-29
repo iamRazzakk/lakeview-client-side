@@ -43,7 +43,7 @@ const AppartmentFullData = ({ apartment }) => {
         }
     }
     return (
-        <div className="card-container ">
+        <div className="card-container w-full ">
             <div className="card-content text-black bg-gray-100 rounded-xl p-6">
                 <div className="flex items-center mt-2.5 mb-5">
                     <img src={img} alt="Apartment Image" className="w-full h-48 object-cover rounded-lg" />
