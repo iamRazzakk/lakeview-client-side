@@ -52,7 +52,7 @@ const Login = () => {
             })
     }
     return (
-        <div className=" m-auto md:mt-5 font-Poppins max-h-full">
+        <div className=" m-auto  font-Poppins min-h-full">
             <div>
                 <h1 className="text-5xl text-center font-bold">Login now!</h1>
             </div>

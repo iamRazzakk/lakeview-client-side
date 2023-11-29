@@ -38,7 +38,7 @@ const Announcements = () => {
             <h1 className="text-2xl font-bold text-center uppercase">
                 Owner  Announcements
             </h1>
-            <div className="w-full mx-auto p-6 rounded">
+            <div className="w-full mx-auto p-6 rounded text-white">
                 <form onSubmit={handleAgrement} className="card-body bg-slate-300">
                     <div className="form-control">
                         <label className="label">
@@ -59,32 +59,6 @@ const Announcements = () => {
                     </div>
                 </form>
             </div>
-            {/* <div className="hero min-h-screen text-white">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form onSubmit={handleAgrement} className="card-body bg-slate-300">
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Title</span>
-                                </label>
-                                <input type="text" name="Title" placeholder="Title" className="input input-bordered" required />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Announcement</span>
-                                </label>
-                                <input type="text" name="Announcement" placeholder="Announcement description" className="input input-bordered" required />
-                            </div>
-                            <div className="form-control mt-6">
-                                <button className="btn">
-                                    <input type="submit" value="Submit" />
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div> */}
-
         </div >
     );
 };

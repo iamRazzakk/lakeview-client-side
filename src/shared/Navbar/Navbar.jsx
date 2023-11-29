@@ -49,15 +49,24 @@ const Navbar = () => {
                         </div>
                     </label>
                     <ul tabIndex={0} className="mt-3 md:mt-6 z-[1] p-2 bg-white text-black shadow menu menu-sm dropdown-content  rounded w-52">
-                        <li>
-                            <a className="justify-between">
-                                {user?.displayName}
-                            </a>
-                        </li>
-                        <li><Link to='/dashboard/profile'>Dashboard</Link></li>
-                        <li>
-                            <button onClick={handleLogout}>Logout</button>
-                        </li>
+                        {
+                            user ? (
+                                <>
+                                    <li>
+                                        <a className="justify-between">
+                                            {user.displayName}
+                                        </a>
+                                    </li>
+                                    <li><Link to='/dashboard/profile'>Dashboard</Link></li>
+                                    <li>
+                                        <button onClick={handleLogout}>Logout</button>
+                                    </li>
+                                </>
+                            ) : (
+                                <li><Link to="/login">Login</Link></li>
+                            )
+                        }
+
                     </ul>
                 </div>
             </div>

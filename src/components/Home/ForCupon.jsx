@@ -1,24 +1,28 @@
+import { useQuery } from "@tanstack/react-query";
+import useAxiosSecure from "../Hook/useAxiosSecure";
 
 
 const ForCupon = () => {
-    const couponData = [
-        { category: "Rent Discounts", title: "Save on Rent", description: "Get a special discount on your next month's rent.", discount: '20%' },
-        { category: "Amenities", title: "Free Gym Access", description: "Enjoy complimentary access to the on-site gym facilities.", discount: '37%' },
-        { category: "Referral Bonus", title: "Refer a Friend", description: "Refer a friend and receive a bonus on your rent.", discount: '25%' },
-        { category: "Amenities", title: "Free Gym Access", description: "Enjoy complimentary access to the on-site gym facilities.", discount: '35%' },
-
-    ];
+    const axiosSecure = useAxiosSecure();
+    const { data: Coupons = [] } = useQuery({
+        queryKey: ["coupon"],
+        queryFn: async () => {
+            const res = await axiosSecure.get("/coupon");
+            return res.data;
+        },
+    });
+    console.log(Coupons);
 
     return (
         <div className="flex font-Poppins flex-wrap justify-around">
-            {couponData.map((coupon, index) => (
-                <div
+            {Coupons.map((coupon, index) => (
+            <div
                     key={index}
-                    className="bg-gray-600 text-white p-6 rounded-lg shadow-md w-64 h-40 m-4"
+                    className="bg-gray-600 text-white p-4 rounded-lg shadow-md w-64 h-40 m-4"
                 >
-                    <h2 className="text-xl font-bold mb-3">{coupon.title}</h2>
-                    <p className="text-white">{coupon.description}</p>
-                    <p>Discount: {coupon.discount}</p>
+                    <h2 className="text-xl font-bold mb-3">{coupon.Code}</h2>
+                    <p className="text-white text-sm">{coupon.Description}</p>
+                    <p>Discount: {coupon.Discount}</p>
                     {/* <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md">
                         Apply Now
                     </button> */}

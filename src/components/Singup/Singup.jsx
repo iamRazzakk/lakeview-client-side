@@ -60,7 +60,7 @@ const Singup = () => {
             })
     }
     return (
-        <div className="w-1/2 m-auto md:mt-5 font-Poppins">
+        <div className="w-1/2 m-auto font-Poppins">
             <div>
                 <h1 className="text-5xl text-center font-bold">SingUp now!</h1>
             </div>
