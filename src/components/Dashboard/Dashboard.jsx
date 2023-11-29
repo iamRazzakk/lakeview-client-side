@@ -18,8 +18,8 @@ const Dashboard = () => {
         <div>
             <Navbar></Navbar>
             <div className="text-black font-Poppins flex md:mt-10">
-                <div className="w-64 max-h-full bg-gray-200">
-                    <ul className="menu p-6 text-xl">
+                <div className="max-w-full md:w-64 max-h-full bg-gray-200">
+                    <ul className="menu p-6 md:text-xl">
                         {/* <li><NavLink to='/'>Home</NavLink></li> */}
                         {
                             isAdmin ? <>
@@ -31,7 +31,9 @@ const Dashboard = () => {
                                 <div className="divider"></div>
                                 <li><NavLink to='/'>Home</NavLink></li>
                                 <li><NavLink to='/dashboard/allannouncements'>All Announcement</NavLink></li>
-                            </> : <></>
+                            </> : <>
+
+                            </>
                         }
                         {
                             isUser?.length > 0 ? <>
@@ -41,14 +43,13 @@ const Dashboard = () => {
                             </> : <></>
                         }
                         {
-                            isMember ? <>
-
-
-                            </> : <>
+                            isMember?.length > 0 ? <>
                                 < li > <NavLink to='/dashboard/memberProfile'>My Profile</NavLink></li>
                                 < li > <NavLink to='/dashboard/makepayment'>Make payment</NavLink></li>
                                 < li > <NavLink to='/dashboard/payment'>Payment History</NavLink></li>
                                 < li > <NavLink to='/dashboard/allannouncements'>Announcements</NavLink></li>
+                            </> : <>
+
                             </>
                         }
 

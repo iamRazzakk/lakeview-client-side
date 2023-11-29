@@ -4,7 +4,7 @@ const AppartmentLocation = () => {
     return (
         <div className='font-Poppins'>
             <h1 className="text-3xl font-bold font-Poppins md:mt-12 md:mb-12">Apartment’s location:~ </h1>
-            <div className="flex">
+            <div className="md:flex">
                 <div className="flex-1">
                     <img
                         className="object-cover w-full rounded-t-lg h-96 md:h-full "

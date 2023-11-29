@@ -35,11 +35,11 @@ const Announcements = () => {
     }
     return (
         < div >
-            <h1 className="text-2xl font-bold text-center uppercase">
+            <h1 className="md:text-2xl font-bold text-center uppercase">
                 Owner  Announcements
             </h1>
-            <div className="w-full mx-auto p-6 rounded text-white">
-                <form onSubmit={handleAgrement} className="card-body bg-slate-300">
+            <div className="max-w-full mx-auto p-6 rounded text-white">
+                <form onSubmit={handleAgrement} className="card-body max-w-full bg-slate-300">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Title</span>

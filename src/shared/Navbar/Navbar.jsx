@@ -31,8 +31,8 @@ const Navbar = () => {
                         {nav}
                     </ul>
                 </div>
-                <div className="w-40">
-                    <img src={img} alt="Lakeview Cottage" />
+                <div className="w-12 md:w-40">
+                    <img className="" src={img} alt="Lakeview Cottage" />
                     <p>Lakeview Cottage</p>
                 </div>
             </div>

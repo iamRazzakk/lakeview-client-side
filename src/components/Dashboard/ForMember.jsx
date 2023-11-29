@@ -76,7 +76,7 @@ const ForMember = () => {
             <h1 className="text-2xl">user{users?.length}</h1>
             <div>
                 <div className="overflow-x-auto">
-                    <table className="table w-full">
+                    <table className="table max-w-full">
                         {/* head */}
                         <thead>
                             <tr>
