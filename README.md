@@ -1,7 +1,7 @@
 # Small Lakeview Cottage
 
 Welcome to Small Lakeview Cottage, a React project that provides different roles for users, including "user," "member," and "admin."
-* note[please login menually]
+# note[please login with email and password]
 ## Overview
   - If you login with admin email than you watch home page.when you click avater in right side there there have profile 
   - A. Admin Profile
