@@ -7,11 +7,11 @@ import { Swal } from 'sweetalert2';
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
     const nav = <>
-        < li > <Link to={'/'}>Home</Link></li>
-        < li > <Link to={'/apartment'}>Apartment</Link></li>
-        {user ? (
-            null
-        ) : <li><Link to="/login">Login</Link></li>}
+        <>
+            <li className={location.pathname === '/' ? 'active' : ''}><Link to={'/'}>Home</Link></li>
+            <li className={location.pathname === '/apartment' ? 'active' : ''}><Link to={'/apartment'}>Apartment</Link></li>
+            {user ? null : <li className={location.pathname === '/login' ? 'active' : ''}><Link to="/login">Login</Link></li>}
+        </>
     </>
     const handleLogout = () => {
         logOut()

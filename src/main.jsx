@@ -25,6 +25,7 @@ import ForCoupons from './components/Dashboard/ForCoupons';
 import AllAnnouncements from './components/Dashboard/AllAnnouncements';
 import FormemberPayment from './components/Dashboard/FormemberPayment';
 import ForPaymentHistory from './components/Dashboard/ForPaymentHistory';
+import {  HelmetProvider } from 'react-helmet-async';
 // import AllUsers from './components/Dashboard/AllUsers';
 const queryClient = new QueryClient();
 
@@ -112,15 +113,17 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <div className='bg-white'>
     <React.StrictMode>
-      <AuthProvider>
-        <QueryClientProvider client={queryClient}>
+      <HelmetProvider>
+        <AuthProvider>
+          <QueryClientProvider client={queryClient}>
 
-          <div className='max-w-screen-xl mx-auto text-Poppins'>
-            <RouterProvider router={router} />
-          </div>
+            <div className='max-w-screen-xl mx-auto text-Poppins'>
+              <RouterProvider router={router} />
+            </div>
 
-        </QueryClientProvider>
-      </AuthProvider>
+          </QueryClientProvider>
+        </AuthProvider>
+      </HelmetProvider>
     </React.StrictMode >
   </div >
 )

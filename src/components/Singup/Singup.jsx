@@ -28,8 +28,10 @@ const Singup = () => {
                         const userInfo = {
                             name: data.name,
                             email: data.email,
-                            role: 'user'
+                            role: 'user',
+                            photo: data.photo
                         }
+                        console.log(userInfo);
                         axiosPublic.post('/users', userInfo)
                             .then((res) => {
                                 if (res.data.insertedId) {

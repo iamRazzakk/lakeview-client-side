@@ -1,5 +1,6 @@
 import useAxiosSecure from "../Hook/useAxiosSecure";
 import { Swal } from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
 
 
 const Announcements = () => {
@@ -35,6 +36,9 @@ const Announcements = () => {
     }
     return (
         < div >
+            <Helmet>
+                <title>DashBoard||Announcements</title>
+            </Helmet>
             <h1 className="md:text-2xl font-bold text-center uppercase">
                 Owner  Announcements
             </h1>

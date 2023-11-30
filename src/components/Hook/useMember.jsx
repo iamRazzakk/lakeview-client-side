@@ -1,21 +1,21 @@
-import { useContext } from "react";
-import { AuthContext } from "../Authprovider/AuthProvider";
-import useAxiosPublic from "./useAxiosPublic";
-import { useQuery } from "@tanstack/react-query";
+// import { useContext } from "react";
+// import { AuthContext } from "../Authprovider/AuthProvider";
+// import useAxiosPublic from "./useAxiosPublic";
+// import { useQuery } from "@tanstack/react-query";
 
 
-const useMember = () => {
-    const { user } = useContext(AuthContext)
-    const axiosPublic = useAxiosPublic()
-    const { data: isMember, isPending: isMemberLoading } = useQuery({
-        queryKey: [user?.email, 'isMember'],
-        queryFn: async () => {
-            console.log('asking or checking is member', user)
-            const res = await axiosPublic.get(`/users/member/${user?.email}`);
-            return res.data?.member;
-        }
-    })
-    return [isMember, isMemberLoading]
-};
+// const useMember = () => {
+//     const { user } = useContext(AuthContext)
+//     const axiosPublic = useAxiosPublic()
+//     const { data: isMember, isPending: isMemberLoading } = useQuery({
+//         queryKey: [user?.email, 'isMember'],
+//         queryFn: async () => {
+//             console.log('asking or checking is member', user)
+//             const res = await axiosPublic.get(`/users/member/${user?.email}`);
+//             return res.data?.member;
+//         }
+//     })
+//     return [isMember, isMemberLoading]
+// };
 
-export default useMember;
+// export default useMember;

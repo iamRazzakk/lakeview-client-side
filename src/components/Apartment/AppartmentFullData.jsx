@@ -27,6 +27,7 @@ const AppartmentFullData = ({ apartment }) => {
                 date: formattedDate,
                 status,
             }
+            console.log(agreementData);
             axiosSecure.post('/agreements', agreementData)
                 .then(res => {
                     console.log(res.data);

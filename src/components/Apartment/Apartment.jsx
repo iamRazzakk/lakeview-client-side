@@ -1,7 +1,8 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import AppartmentFullData from './AppartmentFullData';
 import useAxiosSecure from '../Hook/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
+import { Helmet } from 'react-helmet-async';
 
 const Apartment = () => {
     const axiosSecure = useAxiosSecure();
@@ -14,7 +15,7 @@ const Apartment = () => {
     });
 
     const [currentPage, setCurrentPage] = useState(0);
-    const itemsPerPage = 3;
+    const itemsPerPage = 6;
 
     const indexOfLastApartment = (currentPage + 1) * itemsPerPage;
     const indexOfFirstApartment = indexOfLastApartment - itemsPerPage;
@@ -25,6 +26,9 @@ const Apartment = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Small Lakeview Cottage||Apartment</title>
+            </Helmet>
             <h1 className='text-3xl font-Poppins font-bold text-center md:mb-12'>
                 Total list
             </h1>
