@@ -18,3 +18,7 @@ Welcome to Small Lakeview Cottage, a React project that provides different roles
   **User Role:**
   - if you click on dashboard than show only user profile and announcements which is add by admin
   - - **Member Role:**
+
+
+# live link
+[Link Text]([URL](https://small-lakeview-cottage.web.app/))
