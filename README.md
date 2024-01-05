@@ -22,3 +22,5 @@ Welcome to Small Lakeview Cottage, a React project that provides different roles
 
 # live link
 [Link Text]([URL](https://small-lakeview-cottage.web.app/))
+## Admin email: admin@hello.com
+## Admin password: 123456789
