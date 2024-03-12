@@ -1,8 +1,83 @@
-import bannerImg from '../../../public/banner.jpg'
+import slider1 from '../../../public/sidebar1.jpg'
+import slider2 from '../../../public/sidebar2.jpg'
+import slider3 from '../../../public/sidebar3.jpg'
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { useRef } from 'react';
+import { Link } from 'react-router-dom';
+
 const Header = () => {
+
+    const progressCircle = useRef(null);
+    const progressContent = useRef(null);
+    const onAutoplayTimeLeft = (s, time, progress) => {
+        progressCircle.current.style.setProperty('--progress', 1 - progress);
+        progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+    };
     return (
-        <div className=''>
-            <img className='h-[90vh] w-full object-cover' src={bannerImg} alt="bannerImg" />
+        <div className='md:h-[80vh]'>
+            <Swiper
+                spaceBetween={30}
+                centeredSlides={true}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                pagination={{
+                    clickable: true,
+                }}
+                navigation={true}
+                modules={[Autoplay, Pagination, Navigation]}
+                onAutoplayTimeLeft={onAutoplayTimeLeft}
+                className="mySwiper"
+            >
+                <SwiperSlide>
+                    <img className='rounded-lg relative' src={slider1} alt="" />
+                    <div className="absolute lg:mt-40  rounded-xl items-center h-[40vh] md:ml-14 left-0 px-5 py-10 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 21)]">
+                        <h1 className="text-white text-7xl font-bold">
+                            Cloud Tower-1
+                        </h1>
+                        <h3 className='md:mt-4 text-white text-3xl '>Luxury Apartments in World</h3>
+                        <Link>
+                            <button className='bg-[#6d778f] mt-4 px-6 py-2 text-white text-base rounded-md'>Contact Us</button>
+                        </Link>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img className='rounded-lg' src={slider2} alt="" />
+                    <div className="absolute lg:mt-40  rounded-xl items-center h-[40vh] md:ml-14 left-0 px-5 py-10 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 21)]">
+                        <h1 className="text-white text-7xl font-bold">
+                            Cloud Tower-1
+                        </h1>
+                        <h3 className='md:mt-4 text-white text-3xl '>Luxury Apartments in World</h3>
+                        <Link>
+                            <button className='bg-[#6d778f] mt-4 px-6 py-2 text-white text-base rounded-md'>Contact Us</button>
+                        </Link>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img className='rounded-lg' src={slider3} alt="" />
+                    <div className="absolute lg:mt-40  rounded-xl items-center h-[40vh] md:ml-14 left-0 px-5 py-10 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 21)]">
+                        <h1 className="text-white text-7xl font-bold">
+                            Cloud Tower-1
+                        </h1>
+                        <h3 className='md:mt-4 text-white text-3xl '>Luxury Apartments in World</h3>
+                        <Link>
+                            <button className='bg-[#6d778f] mt-4 px-6 py-2 text-white text-base rounded-md'>Contact Us</button>
+                        </Link>
+                    </div>
+                </SwiperSlide>
+                <div className="autoplay-progress" slot="container-end">
+                    <svg viewBox="0 0 48 48" ref={progressCircle}>
+                        <circle cx="" cy="" r=""></circle>
+                    </svg>
+                    <span ref={progressContent}></span>
+                </div>
+            </Swiper>
         </div>
     );
 };

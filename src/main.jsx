@@ -116,11 +116,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <HelmetProvider>
         <AuthProvider>
           <QueryClientProvider client={queryClient}>
-
             <div className='max-w-screen-xl mx-auto text-Poppins'>
               <RouterProvider router={router} />
             </div>
-
           </QueryClientProvider>
         </AuthProvider>
       </HelmetProvider>
