@@ -1,15 +1,30 @@
 import { Link } from "react-router-dom";
 import img from '../../../public/logo (1).png'
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../components/Authprovider/AuthProvider";
 import { Swal } from 'sweetalert2';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
+    const [isScroll, SetScroll] = useState(false)
+    const handleScroll = () => {
+        if (window.scrollY > 0) {
+            SetScroll(true)
+        } else {
+            SetScroll(false)
+        }
+    }
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
     const nav = <>
         <>
             <li className={location.pathname === '/' ? 'active' : ''}><Link to={'/'}>Home</Link></li>
             <li className={location.pathname === '/apartment' ? 'active' : ''}><Link to={'/apartment'}>Apartment</Link></li>
+            <li className={location.pathname === '/contact' ? 'active' : ''}><Link to={'/contact'}>Contact</Link></li>
             {user ? null : <li className={location.pathname === '/login' ? 'active' : ''}><Link to="/login">Login</Link></li>}
         </>
     </>
@@ -21,7 +36,7 @@ const Navbar = () => {
             .catch(error => console.log(error))
     }
     return (
-        <div className="navbar bg-white text-black font-bold font-Poppins">
+        <div className={`navbar bg-white text-black font-bold font-Poppins relative z-50 ${isScroll ? 'fixed top-0 left-0 right-0 z-50 shadow-lg md:px-11':''}`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

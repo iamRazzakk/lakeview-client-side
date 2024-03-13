@@ -25,7 +25,8 @@ import ForCoupons from './components/Dashboard/ForCoupons';
 import AllAnnouncements from './components/Dashboard/AllAnnouncements';
 import FormemberPayment from './components/Dashboard/FormemberPayment';
 import ForPaymentHistory from './components/Dashboard/ForPaymentHistory';
-import {  HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider } from 'react-helmet-async';
+import Contact from './components/Home/Contact';
 // import AllUsers from './components/Dashboard/AllUsers';
 const queryClient = new QueryClient();
 
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path: '/locationOnMap',
         element: <LocationOnMap></LocationOnMap>
+      },
+      {
+        path: '/contact',
+        element: <Contact></Contact>
       }
     ]
   },
@@ -116,7 +121,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <HelmetProvider>
         <AuthProvider>
           <QueryClientProvider client={queryClient}>
-            <div className='max-w-screen-xl mx-auto text-Poppins'>
+            <div className='lg:max-w-screen-xl mx-auto text-Poppins'>
               <RouterProvider router={router} />
             </div>
           </QueryClientProvider>
