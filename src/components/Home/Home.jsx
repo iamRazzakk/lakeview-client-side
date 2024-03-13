@@ -5,6 +5,8 @@ import Cupon from "./Cupon";
 import Header from "./Header";
 import CountUpSection from "./CountUpSection";
 import AboutTheCloudService from "./AboutTheCloudService";
+import Project from "./Project";
+import ApartmentsPlans from "./ApartmentsPlans";
 
 
 const Home = () => {
@@ -20,6 +22,8 @@ const Home = () => {
             <CountUpSection></CountUpSection>
             <AboutTheCloudService></AboutTheCloudService>
             <Cupon></Cupon>
+            <Project></Project>
+            <ApartmentsPlans></ApartmentsPlans>
             <AppartmentLocation></AppartmentLocation>
         </div>
     );

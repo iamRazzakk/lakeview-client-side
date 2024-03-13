@@ -3,8 +3,8 @@ import locaionImg from '../../../public/1st-sec-1.jpg';
 const AboutTheBuilding = () => {
     return (
         <div className='font-Poppins md:flex gap-4 text-black md:mt-32'>
-            <div className="flex-1 md:p-10">
-                <h1 className="text-5xl md:mb-3">
+            <div className="flex-1 md:p-5">
+                <h1 className="text-5xl md:mb-8">
                     Book A Luxury Apartment in Islamabad
                 </h1>
                 <h5 className='text-base font-bold md:mb-3'>
@@ -22,7 +22,7 @@ const AboutTheBuilding = () => {
                 </div>
             </div>
             <div className="flex-1">
-                <img className='rounded-br-full' src={locaionImg} alt="" />
+                <img className='p-10 rounded-tl-full' src={locaionImg} alt="" />
             </div>
         </div>
     );

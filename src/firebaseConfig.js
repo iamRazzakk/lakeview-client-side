@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyA0nhHwCcnhg5ZTi7A1X1J84vuH9ThLIrw",
-    authDomain: "small-lakeview-cottage.firebaseapp.com",
-    projectId: "small-lakeview-cottage",
-    storageBucket: "small-lakeview-cottage.appspot.com",
-    messagingSenderId: "152034626407",
-    appId: "1:152034626407:web:5c2d81ede970fcc2877dc2"
+  apiKey: "AIzaSyBg4g5T3tKaU_4Ir6QeHAXkGZ03NODbyS8",
+  authDomain: "small-lakeview-cottage-7d6ee.firebaseapp.com",
+  projectId: "small-lakeview-cottage-7d6ee",
+  storageBucket: "small-lakeview-cottage-7d6ee.appspot.com",
+  messagingSenderId: "560180248079",
+  appId: "1:560180248079:web:e45eb845b68b59ced1ad7a",
 };
 
 // Initialize Firebase
