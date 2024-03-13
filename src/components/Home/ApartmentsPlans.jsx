@@ -14,9 +14,9 @@ const ApartmentsPlans = () => {
         <div className="md:mt-32">
             <div className="md:flex p-6 justify-center items-center">
                 <div role="tablist" className="tabs tabs-bordered">
-                    <a onClick={() => handleClick("One")} role="tab" className={` tab ${activeTab === 'One' ? 'active text-black font-bold' : ''}`}>ONE BED APARTMENT</a>
-                    <a onClick={() => handleClick("Two")} role="tab" className={` tab ${activeTab === 'Two' ? 'active text-black font-bold' : ''}`}> TWO BED APARTMENT</a>
-                    <a onClick={() => handleClick("Three")} role="tab" className={` tab ${activeTab === 'Three' ? 'active text-black font-bold' : ''}`} >THREE BED APARTMENT</a>
+                    <a onClick={() => handleClick("One")} role="tab" className={` text-black tab ${activeTab === 'One' ? 'active text-black font-bold' : ''}`}>ONE BED APARTMENT</a>
+                    <a onClick={() => handleClick("Two")} role="tab" className={`text-black tab ${activeTab === 'Two' ? 'active text-black font-bold' : ''}`}> TWO BED APARTMENT</a>
+                    <a onClick={() => handleClick("Three")} role="tab" className={`text-black tab ${activeTab === 'Three' ? 'active text-black font-bold' : ''}`} >THREE BED APARTMENT</a>
                 </div>
             </div>
             <div className="md:mt-10">

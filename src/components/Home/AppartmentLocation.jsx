@@ -2,8 +2,7 @@ import { Link } from 'react-router-dom';
 import forLocation from '../../../public/forlocation.jpg'
 const AppartmentLocation = () => {
     return (
-        <div className='font-Poppins'>
-            <h1 className="text-3xl font-bold font-Poppins md:mt-12 md:mb-12">Apartment’s location:~ </h1>
+        <div className='font-Poppins mt-10 md:mt-32'>
             <div className="md:flex">
                 <div className="flex-1">
                     <img

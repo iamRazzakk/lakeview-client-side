@@ -18,7 +18,7 @@ const ForCupon = () => {
             {Coupons.map((coupon, index) => (
             <div
                     key={index}
-                    className="coupon-card bg-gray-600 text-white p-4 rounded-lg shadow-md w-64 h-40 m-4"
+                    className="coupon-card bg-[#161d2d] text-white p-4 rounded-lg shadow-md w-64 h-40 m-4"
                 >
                     <h2 className="text-xl font-bold mb-3">{coupon.Code}</h2>
                     <p className="text-white text-sm">{coupon.Description}</p>

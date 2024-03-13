@@ -10,7 +10,7 @@ import '../Home/Cupon.css'
 const Project = () => {
     return (
         <div className="md:mt-32">
-            <div className="text-center text-5xl text-black">
+            <div className="text-center md:mb-10 mb-4 text-5xl text-black">
                 Project Facilities
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">

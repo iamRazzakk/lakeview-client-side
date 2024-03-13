@@ -8,7 +8,7 @@ const Contact = () => {
     return (
         <div className=" ">
             <div className=''>
-                <img className=' md:h-[60vh] w-full object-cover' src={aboutUS} alt="" />
+                <img className=' md:h-[60vh] w-full object-cover rounded-lg' src={aboutUS} alt="" />
             </div>
             <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 md:mt-10 mt-4'>
                 <div className='text-black coupon-card border p-6 space-y-4 rounded-md'>
