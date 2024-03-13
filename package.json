@@ -13,6 +13,7 @@
     "@egjs/react-flicking": "^4.11.1",
     "@sweetalert2/themes": "^5.0.15",
     "@tanstack/react-query": "^5.8.7",
+    "aos": "^3.0.0-beta.6",
     "axios": "^1.6.2",
     "firebase": "^10.8.1",
     "google-map-react": "^2.2.1",

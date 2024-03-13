@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../Hook/useAxiosSecure";
-
+import '../Home/Cupon.css'
 
 const ForCupon = () => {
     const axiosSecure = useAxiosSecure();
@@ -18,14 +18,11 @@ const ForCupon = () => {
             {Coupons.map((coupon, index) => (
             <div
                     key={index}
-                    className="bg-gray-600 text-white p-4 rounded-lg shadow-md w-64 h-40 m-4"
+                    className="coupon-card bg-gray-600 text-white p-4 rounded-lg shadow-md w-64 h-40 m-4"
                 >
                     <h2 className="text-xl font-bold mb-3">{coupon.Code}</h2>
                     <p className="text-white text-sm">{coupon.Description}</p>
                     <p>Discount: {coupon.Discount}</p>
-                    {/* <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md">
-                        Apply Now
-                    </button> */}
                 </div>
             ))}
         </div>

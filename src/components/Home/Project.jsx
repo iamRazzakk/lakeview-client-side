@@ -6,7 +6,7 @@ import { SlEnergy } from "react-icons/sl";
 import { FaDatabase } from "react-icons/fa";
 import { FaHouse } from "react-icons/fa6";
 import { MdLocalPharmacy } from "react-icons/md";
-
+import '../Home/Cupon.css'
 const Project = () => {
     return (
         <div className="md:mt-32">
@@ -15,7 +15,7 @@ const Project = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                 {/*  Community Living */}
-                <div className="card card-compact shadow-xl p-6">
+                <div className="card card-compact shadow-xl p-6 coupon-card">
                     <figure><IoPeopleSharp className="text-4xl text-black"></IoPeopleSharp></figure>
                     <div className="card-body">
                         <h2 className=" text-center text-xl font-bold text-black">Community Living</h2>
@@ -23,7 +23,7 @@ const Project = () => {
                     </div>
                 </div>
                 {/* Roof Top Restaurant */}
-                <div className="card card-compact shadow-xl p-6">
+                <div className="card card-compact shadow-xl p-6 coupon-card">
                     <figure><IoMdRestaurant className="text-4xl text-black"></IoMdRestaurant></figure>
                     <div className="card-body">
                         <h2 className=" text-center text-xl font-bold text-black">Roof Top Restaurant</h2>
@@ -31,7 +31,7 @@ const Project = () => {
                     </div>
                 </div>
                 {/*  Gym */}
-                <div className="card card-compact shadow-xl p-6">
+                <div className="card card-compact shadow-xl p-6 coupon-card">
                     <figure><CgGym className="text-4xl text-black"></CgGym></figure>
                     <div className="card-body">
                         <h2 className=" text-center text-xl font-bold text-black">Gym</h2>
@@ -39,7 +39,7 @@ const Project = () => {
                     </div>
                 </div>
                 {/*  Security */}
-                <div className="card card-compact shadow-xl p-6">
+                <div className="card card-compact shadow-xl p-6 coupon-card">
                     <figure><GiSecurityGate className='text-4xl text-black'></GiSecurityGate></figure>
                     <div className="card-body">
                         <h2 className=" text-center text-xl font-bold text-black">Security</h2>
@@ -47,7 +47,7 @@ const Project = () => {
                     </div>
                 </div>
                 {/*  Energy Efficiency */}
-                <div className="card card-compact shadow-xl p-6">
+                <div className="card card-compact shadow-xl p-6 coupon-card">
                     <figure><SlEnergy className='text-4xl text-black'></SlEnergy></figure>
                     <div className="card-body">
                         <h2 className=" text-center text-xl font-bold text-black">Energy Efficiency</h2>
@@ -55,7 +55,7 @@ const Project = () => {
                     </div>
                 </div>
                 {/*  Data Connectivity */}
-                <div className="card card-compact shadow-xl p-6">
+                <div className="card card-compact shadow-xl p-6 coupon-card">
                     <figure><FaDatabase className='text-4xl text-black'></FaDatabase ></figure>
                     <div className="card-body">
                         <h2 className=" text-center text-xl font-bold text-black">Data Connectivity</h2>
@@ -63,7 +63,7 @@ const Project = () => {
                     </div>
                 </div>
                 {/*  Community Living */}
-                <div className="card card-compact shadow-xl p-6">
+                <div className="card card-compact shadow-xl p-6 coupon-card">
                     <figure><FaHouse className='text-4xl text-black'></FaHouse></figure>
                     <div className="card-body">
                         <h2 className=" text-center text-xl font-bold text-black">Smart Building</h2>
@@ -71,7 +71,7 @@ const Project = () => {
                     </div>
                 </div>
                 {/*  Pharmacy */}
-                <div className="card card-compact shadow-xl p-6">
+                <div className="card card-compact shadow-xl p-6 coupon-card">
                     <figure><MdLocalPharmacy className='text-4xl text-black'></MdLocalPharmacy></figure>
                     <div className="card-body">
                         <h2 className=" text-center text-xl font-bold text-black">Pharmacy</h2>

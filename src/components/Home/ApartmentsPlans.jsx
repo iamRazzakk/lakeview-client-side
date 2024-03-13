@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import OneBadImg from '../../../public/One-bed-apartment-1-new.png'
 import TwoBadImg from '../../../public/twoBad.png'
 import ThreeBadImg from '../../../public/threeBad.png'
@@ -12,17 +12,17 @@ const ApartmentsPlans = () => {
 
     return (
         <div className="md:mt-32">
-            <div className="flex justify-center items-center">
+            <div className="md:flex p-6 justify-center items-center">
                 <div role="tablist" className="tabs tabs-bordered">
-                    <a onClick={() => handleClick("One")} role="tab" className={`tab ${activeTab === 'One' ? 'active text-blue-800 font-bold' : ''}`}>ONE BED APARTMENT</a>
-                    <a onClick={() => handleClick("Two")} role="tab" className={`tab ${activeTab === 'Two' ? 'active text-blue-800 font-bold' : ''}`}> TWO BED APARTMENT</a>
-                    <a onClick={() => handleClick("Three")} role="tab" className={`tab ${activeTab === 'Three' ? 'active text-blue-800 font-bold' : ''}`} >THREE BED APARTMENT</a>
+                    <a onClick={() => handleClick("One")} role="tab" className={` tab ${activeTab === 'One' ? 'active text-black font-bold' : ''}`}>ONE BED APARTMENT</a>
+                    <a onClick={() => handleClick("Two")} role="tab" className={` tab ${activeTab === 'Two' ? 'active text-black font-bold' : ''}`}> TWO BED APARTMENT</a>
+                    <a onClick={() => handleClick("Three")} role="tab" className={` tab ${activeTab === 'Three' ? 'active text-black font-bold' : ''}`} >THREE BED APARTMENT</a>
                 </div>
             </div>
             <div className="md:mt-10">
                 {/* for One Bad */}
                 {activeTab === "One" && (
-                    <div className="flex bg-gray-200 gap-4 text-black">
+                    <div className="md:flex p-6 bg-gray-200 gap-4 text-black">
                         <div className="flex-1 md:p-16">
                             <h1 className="text-xl md:mb-4">Designs own a long-term permanent residence having spacious rooms with all the required facilities.</h1>
                             <div className="space-y-4">
@@ -44,7 +44,7 @@ const ApartmentsPlans = () => {
                 )}
                 {/* For Two Bad */}
                 {
-                    activeTab === "Two" && (<div className="flex bg-gray-200 gap-4 text-black">
+                    activeTab === "Two" && (<div className="md:flex p-6 bg-gray-200 gap-4 text-black">
                         <div className="flex-1 md:p-16">
                             <h1 className="text-xl md:mb-4">Designs own a long-term permanent residence having spacious rooms with all the required facilities.</h1>
                             <div className="space-y-4">
@@ -66,7 +66,7 @@ const ApartmentsPlans = () => {
                 }
                 {/* Three Bad */}
                 {
-                    activeTab === "Three" && (<div className="flex bg-gray-200 gap-4 text-black">
+                    activeTab === "Three" && (<div className="md:flex p-6 bg-gray-200 gap-4 text-black">
                         <div className="flex-1 md:p-16">
                             <h1 className="text-xl md:mb-4">Designs own a long-term permanent residence having spacious rooms with all the required facilities.</h1>
                             <div className="space-y-4">

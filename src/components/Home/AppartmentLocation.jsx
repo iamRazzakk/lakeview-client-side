@@ -15,10 +15,10 @@ const AppartmentLocation = () => {
                 <div className="flex-1 p-10">
                     <div className="flex flex-col  justify-between p-4 leading-normal">
                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-black  md:mb-4">Apartment Name:  Lakeview Cottage</h5>
-                        <p className="mb-3 font-normal md:mb-5">
+                        <p className="text-black mb-3 font-normal md:mb-5">
                             Area: Sprawling 5-acre land offers exciting potential for diverse developments and ventures.
                         </p>
-                        <p className="text-2xl md:mb-5">Location: Plot 14/B, Road 57/59, Gulshan 2 Dhaka, DHA 1212</p>
+                        <p className="text-black text-2xl md:mb-5">Location: Plot 14/B, Road 57/59, Gulshan 2 Dhaka, DHA 1212</p>
                     </div>
                     <Link to={ '/locationOnMap'}>
                         <button className="border border-black bg-black text-white px-4 py-2 rounded flex justify-center items-center hover:bg-gray-600 hover:text-white">
