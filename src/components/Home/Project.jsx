@@ -13,7 +13,7 @@ const Project = () => {
             <div className="text-center text-5xl text-black">
                 Project Facilities
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {/*  Community Living */}
                 <div className="card card-compact shadow-xl p-6 coupon-card">
                     <figure><IoPeopleSharp className="text-4xl text-black"></IoPeopleSharp></figure>
